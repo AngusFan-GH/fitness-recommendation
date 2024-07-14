@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="title">你的身高是多少？</view>
+  <view class="wrapper">
+  <input type="number" placeholder="身高" bindinput="bindHeightInput"/>
+  <view class="unit">cm</view>
+</view>
+<button class="primary-button" bindtap="next" disabled="{{height === null}}">继续</button>
+<button class="secondary-button" bindtap="back">返回</button>
+</view>

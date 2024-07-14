@@ -1,0 +1,8 @@
+<view class="container">
+  <text class="title">你的饮食建议</text>
+  <view>
+    <text>吃 {{recommendations.calories}} 每天卡路里</text>
+    <text>吃 {{recommendations.protein}} 克蛋白质</text>
+    <text>吃 {{recommendations.fat}} 克脂肪</text>
+  </view>
+</view>

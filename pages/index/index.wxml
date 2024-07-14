@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="title">60秒内找到最适合你的饮食</view>
+  <text class="description">
+    你每天应该摄入多少卡路里?你的“宏”呢?你应该吃什么类型的食物?你应该在你的养生法中加入补充剂吗?现在就参加这个测试，以获得这些问题和更多问题的科学答案。
+  </text>
+  <button bindtap="startQuiz">开始</button>
+</view>

@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="title">你的健身目标是什么？</view>
+  <checkbox-group bindchange="bindGoalChange">
+    <view class="options" wx:for="{{goalOptions}}" wx:key="index">
+      <label><checkbox value="{{index}}"/> {{item}}</label>
+    </view>
+  </checkbox-group>
+  <button class="primary-button" bindtap="next" disabled="{{goals.length === 0}}">继续</button>
+  <button class="secondary-button" bindtap="back">返回</button>
+</view>

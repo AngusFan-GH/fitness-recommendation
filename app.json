@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/gender/gender",
+    "pages/age/age",
+    "pages/weight/weight",
+    "pages/height/height",
+    "pages/goals/goals",
+    "pages/fitness/fitness",
+    "pages/result/result"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#007ACC",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  }
+}
