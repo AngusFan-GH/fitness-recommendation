@@ -27,7 +27,7 @@
     <view>首先，要明白一点，健康的体魄不是一夜之间就能拥有的。它需要的是持续的努力和正确的方向。</view>
     <view>不要因为短期内看不到显著变化而气馁。身体的变化是渐进式的，就像种下一棵树苗，需要时间去成长。</view>
     <view>让我们一起耐心地享受这个过程吧！记住，美好的事物总是值得等待的。</view>
-    <view>一切关于健身方面的问题都可以问我</view>
+    <view>一切关于健身方面的问题都可以问我。</view>
     <view class="promo">添加好友可获得一整月饮食&健身计划一份</view>
     <view class="qr-code">
       <image src="/images/qr-code.jpg" mode="aspectFit" class="qr-image" show-menu-by-longpress="true"></image>
