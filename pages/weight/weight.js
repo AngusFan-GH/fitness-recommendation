@@ -18,9 +18,17 @@ Page({
         })
     },
     bindWeightInput: function (e) {
-        this.setData({
-            weight: e.detail.value
-        })
+        const value = e.detail.value.replace(/\D/g, ''); // 去掉非数字字符
+        const weight = parseInt(value, 10)
+        if (!isNaN(weight) && weight > 0) {
+            this.setData({
+                weight: value
+            })
+        } else {
+            this.setData({
+                weight: null
+            })
+        }
     },
     bindUnitChange: function (e) {
         this.setData({
@@ -28,9 +36,17 @@ Page({
         })
     },
     bindGoalsWeightInput: function (e) {
-        this.setData({
-            goalsWeight: e.detail.value
-        })
+        const value = e.detail.value.replace(/\D/g, ''); // 去掉非数字字符
+        const goalsWeight = parseInt(value, 10)
+        if (!isNaN(goalsWeight) && goalsWeight > 0) {
+            this.setData({
+                goalsWeight: value
+            })
+        } else {
+            this.setData({
+                goalsWeight: null
+            })
+        }
     },
     bindGoalsUnitChange: function (e) {
         this.setData({

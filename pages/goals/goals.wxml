@@ -1,11 +1,8 @@
 <view class="container">
     <view class="title">你的健身目标是什么？</view>
-    <radio-group bindchange="bindGoalChange">
-        <block wx:for="{{goalOptions}}" wx:key="index">
-            <label class="radio">
-                <radio value="{{item.value}}" /> {{item.name}}
-            </label>
-        </block>
-    </radio-group>
+    <view class="goals-wrapper {{goals === item.value ? 'active' : ''}}" wx:for="{{goalOptions}}" wx:key="index" bindtap="bindGoalChange" data-goals="{{item.value}}">
+        <image src="{{item.imageUrl}}" mode="" />
+        <view>{{item.name}}</view>
+    </view>
     <button class="next-button" bindtap="next" disabled="{{goals === null}}">继续</button>
 </view>

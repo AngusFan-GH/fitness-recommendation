@@ -24,7 +24,8 @@ Page({
         if (this.data.gender) {
             app.globalData.gender = this.data.gender;
             wx.navigateTo({
-                url: '/pages/age/age'
+                // url: '/pages/age/age'
+                url: '/pages/goals/goals'
             });
         }
     }
