@@ -21,7 +21,6 @@ Page({
             weight,
             unit,
             goalsWeight,
-            goalsUnit,
             date,
             goals,
             fitnessLevel,
@@ -29,7 +28,7 @@ Page({
         } = app.globalData;
         const BMR = this.calcBMR(weight, gender, BFR);
         const TDEE = this.calcTDEE(BMR, fitnessLevel);
-        const heatGap = this.calcHeatGap(weight, unit, goalsWeight, goalsUnit, date, goals);
+        const heatGap = this.calcHeatGap(weight, unit, goalsWeight, date, goals);
 
         const calories = (TDEE + heatGap).toFixed(0);
         const protein = (this.standardizeUnit2Kg(weight, unit) * this.data.proteinCoefficient[goals]).toFixed(0);
@@ -46,9 +45,9 @@ Page({
         });
     },
     // 计算热量缺口
-    calcHeatGap: function (weight, unit, goalsWeight, goalsUnit, date, goals) {
+    calcHeatGap: function (weight, unit, goalsWeight, date, goals) {
         if (!goalsWeight) return 0;
-        return (this.standardizeUnit2Kg(weight, unit) - this.standardizeUnit2Kg(goalsWeight, goalsUnit)) * this.data.heatGapCoefficient[goals] / this.calcDays(date);
+        return (this.standardizeUnit2Kg(weight, unit) - this.standardizeUnit2Kg(goalsWeight, unit)) * this.data.heatGapCoefficient[goals] / this.calcDays(date);
     },
     // 计算总日能量消耗
     calcTDEE: function (BMR, fitnessLevel) {

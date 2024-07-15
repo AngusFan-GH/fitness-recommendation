@@ -5,7 +5,6 @@ App({
     weight: null,
     unit: 'null',
     goalsWeight: null,
-    goalsUnit: null,
     goals: null,
     BFR: null,
     fitnessLevel: null,

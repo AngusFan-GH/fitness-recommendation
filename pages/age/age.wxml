@@ -1,7 +1,7 @@
 <view class="container">
     <view class="title">你的年龄是多少？</view>
     <view class="wrapper">
-        <input type="number" placeholder="年龄" value="{{age}}" bindinput="bindAgeInput" />
+        <input type="number" placeholder="年龄" value="{{age}}" bindblur="bindAgeInput" class="input" />
         <view class="unit">岁</view>
     </view>
     <text class="hint">请输入 {{minAge}} 和 {{maxAge}} 之间的数字</text>

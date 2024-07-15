@@ -1,27 +1,55 @@
+/* index.wxss */
 .container {
-  padding-top: 20px;
-  width: 100%;
+  padding: 20px;
+  background-color: #f0f4f8; /* 健身风格的背景色 */
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   box-sizing: border-box;
 }
 
 .title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
-  margin-bottom: 20px;
+  color: #007bff; /* 健身风格的强调色 */
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* 增加阴影效果 */
 }
 
 .gender-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    box-sizing: border-box;
-    border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 80%;
+  max-width: 300px;
 }
+
 .gender-wrapper.active {
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px;
+  border-color: #007bff; /* 健身风格的强调色 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.gender-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.gender-name {
+  font-size: 20px;
+  color: #333;
+}
+
+
+

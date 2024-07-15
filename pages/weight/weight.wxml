@@ -1,27 +1,27 @@
 <view class="container">
     <view class="title">你的体重是多少？</view>
-    <view wx:if="{{goals !== '2'}}">体重：</view>
-    <view class="wrapper">
-        <input type="number" placeholder="体重" bindinput="bindWeightInput" />
-        <picker mode="selector" range="{{unitOptions}}" bindchange="bindUnitChange" value="{{unitIndex}}">
-            <view class="picker">
-                {{unitOptions[unitIndex]}}
-            </view>
-        </picker>
-    </view>
-    <view wx:if="{{goals !== '2'}}">目标体重：</view>
-    <view wx:if="{{goals !== '2'}}" class="wrapper">
-        <input type="number" placeholder="目标体重" bindinput="bindGoalsWeightInput" />
-        <picker mode="selector" range="{{unitOptions}}" bindchange="bindGoalsUnitChange" value="{{goalsUnitIndex}}">
-            <view class="picker">
-                {{unitOptions[goalsUnitIndex]}}
-            </view>
-        </picker>
+    <view class="section">
+        <view class="section__title" wx:if="{{goals !== '2'}}">体重：</view>
+        <view class="wrapper">
+            <input type="number" placeholder="体重" bindblur="bindWeightInput" data-type="weight" class="input" value="{{weight}}" />
+            <picker mode="selector" range="{{unitOptions}}" bindchange="bindUnitChange" value="{{unitIndex}}" class="picker">
+                <view class="picker-text">{{unitOptions[unitIndex]}}</view>
+            </picker>
+        </view>
     </view>
     <view wx:if="{{goals !== '2'}}" class="section">
-        <view wx:if="{{goals !== '2'}}" class="section__title">计划完成日期:</view>
-        <picker mode="date" value="{{date}}" start="{{startDate}}" bindchange="bindDateChange">
-            <view class="picker">
+        <view class="section__title">目标体重：</view>
+        <view class="wrapper">
+            <input type="number" placeholder="目标体重" bindblur="bindWeightInput" data-type="goalsWeight" class="input" value="{{goalsWeight}}" />
+            <picker mode="selector" range="{{unitOptions}}" bindchange="bindUnitChange" value="{{unitIndex}}" class="picker">
+                <view class="picker-text">{{unitOptions[unitIndex]}}</view>
+            </picker>
+        </view>
+    </view>
+    <view wx:if="{{goals !== '2'}}" class="section">
+        <view class="section__title">计划完成日期:</view>
+        <picker mode="date" value="{{date}}" start="{{startDate}}" bindchange="bindDateChange" class="picker">
+            <view class="picker-text">
                 <text wx:if="{{date}}">{{date}}</text>
                 <text wx:else>选择目标日期</text>
             </view>

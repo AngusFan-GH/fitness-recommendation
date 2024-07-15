@@ -1,8 +1,94 @@
+/* index.wxss */
 .container {
   padding: 20px;
+  background-color: #f0f4f8; /* 健身风格的背景色 */
+  font-family: 'Arial', sans-serif;
 }
+
 .title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
-  margin-bottom: 20px;
+  color: #007bff; /* 健身风格的强调色 */
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* 增加阴影效果 */
+}
+
+.recommendations {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.recommendation-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.recommendation-item:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-size: 18px;
+  color: #555;
+}
+
+.value {
+  font-size: 18px;
+  color: #007bff; /* 健身风格的强调色 */
+  font-weight: bold;
+}
+
+.tips {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tips .tip-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #007bff; /* 健身风格的强调色 */
+  margin-bottom: 15px;
+}
+
+.tips view {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.tips .promo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #28a745; /* 健身风格的强调色 */
+  text-align: center;
+  margin-top: 20px;
+}
+
+.qr-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.qr-image {
+  width: 200px;
+  border: 2px solid #007bff; /* 健身风格的强调色 */
+  border-radius: 10px;
+}
+
+.qr-text {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
 }

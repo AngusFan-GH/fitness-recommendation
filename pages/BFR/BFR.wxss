@@ -1,15 +1,62 @@
+/* index.wxss */
 .container {
-    padding: 20px;
+  padding: 20px;
+  background-color: #f0f4f8; /* 健身风格的背景色 */
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 .title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #007bff; /* 健身风格的强调色 */
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* 增加阴影效果 */
 }
 
-.radio {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
+.BFR-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
+
+.BFR-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: calc(50% - 20px); /* 每行两个选项 */
+  max-width: 150px;
+}
+
+.BFR-wrapper.active {
+  border-color: #007bff; /* 健身风格的强调色 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.BFR-image {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.BFR-name {
+  font-size: 18px;
+  color: #333;
+}
+
+
+

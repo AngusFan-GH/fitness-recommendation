@@ -5,8 +5,16 @@ Page({
     height: null,
   },
   bindHeightInput: function(e) {
+    const value = e.detail.value.replace(/\D/g, ''); // 去掉非数字字符
+    const height = parseInt(value, 10);
+    if (isNaN(height)) {
+      this.setData({
+        height: null
+      })
+      return;
+    }
     this.setData({
-      height: e.detail.value
+      height: height
     })
   },
   next: function() {
