@@ -5,7 +5,7 @@ Page({
     goals: null,
     weight: null,
     goalsWeight: null,
-    unitOptions: ['kg', 'lbs'],
+    unitOptions: ['公斤', '磅'],
     unitIndex: 0,
     date: null,
     startDate: null
