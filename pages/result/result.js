@@ -34,7 +34,7 @@ Page({
         const calories = (TDEE + heatGap).toFixed(0);
         const protein = (this.standardizeUnit2Kg(weight, unit) * this.data.proteinCoefficient[goals]).toFixed(0);
         const fat = (this.standardizeUnit2Kg(weight, unit) * this.data.fatCoefficient[goals]).toFixed(0);
-        const carbohydrate = ((calories - protein - fat) / 4).toFixed(0);
+        const carbohydrate = ((calories - protein * 4 - fat * 9) / 4).toFixed(0);
 
         this.setData({
             recommendations: {
