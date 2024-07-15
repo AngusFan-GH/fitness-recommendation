@@ -4,8 +4,7 @@ Page({
   data: {
     genderOptions: [
       { name: "男生", value: "0" },
-      { name: "女生", value: "1" },
-      { name: "保密", value: "2" }
+      { name: "女生", value: "1" }
     ],
     gender: null
   },
@@ -21,8 +20,5 @@ Page({
         url: '/pages/age/age'
       });
     }
-  },
-  back: function() {
-    wx.navigateBack();
   }
 });

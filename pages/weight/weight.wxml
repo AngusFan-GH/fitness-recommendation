@@ -1,23 +1,31 @@
 <view class="container">
-  <view class="title">你的体重是多少？</view>
-  <view>体重：</view>
-  <view class="wrapper">
-    <input type="number" placeholder="体重" bindinput="bindWeightInput"/>
-    <picker mode="selector" range="{{unitOptions}}" bindchange="bindUnitChange" value="{{unitIndex}}">
-      <view class="picker">
-        {{unitOptions[unitIndex]}}
-      </view>
-    </picker>
-  </view>
-  <view>目标体重：</view>
-  <view class="wrapper">
-    <input type="number" placeholder="目标体重" bindinput="bindGoalsWeightInput"/>
-    <picker mode="selector" range="{{unitOptions}}" bindchange="bindGoalsUnitChange" value="{{goalsUnitIndex}}">
-      <view class="picker">
-        {{unitOptions[goalsUnitIndex]}}
-      </view>
-    </picker>
-  </view>
-<button class="primary-button" bindtap="next" disabled="{{weight === null || goalsWeight === null}}">继续</button>
-<button class="secondary-button" bindtap="back">返回</button>
+    <view class="title">你的体重是多少？</view>
+    <view wx:if="{{goals !== '2'}}">体重：</view>
+    <view class="wrapper">
+        <input type="number" placeholder="体重" bindinput="bindWeightInput" />
+        <picker mode="selector" range="{{unitOptions}}" bindchange="bindUnitChange" value="{{unitIndex}}">
+            <view class="picker">
+                {{unitOptions[unitIndex]}}
+            </view>
+        </picker>
+    </view>
+    <view wx:if="{{goals !== '2'}}">目标体重：</view>
+    <view wx:if="{{goals !== '2'}}" class="wrapper">
+        <input type="number" placeholder="目标体重" bindinput="bindGoalsWeightInput" />
+        <picker mode="selector" range="{{unitOptions}}" bindchange="bindGoalsUnitChange" value="{{goalsUnitIndex}}">
+            <view class="picker">
+                {{unitOptions[goalsUnitIndex]}}
+            </view>
+        </picker>
+    </view>
+    <view wx:if="{{goals !== '2'}}" class="section">
+        <view wx:if="{{goals !== '2'}}" class="section__title">计划完成日期:</view>
+        <picker mode="date" value="{{date}}" start="{{startDate}}" bindchange="bindDateChange">
+            <view class="picker">
+                <text wx:if="{{date}}">{{date}}</text>
+                <text wx:else>选择目标日期</text>
+            </view>
+        </picker>
+    </view>
+    <button class="next-button" disabled="{{goals === '2' ? weight === null : weight === null || goalsWeight === null || date === null}}" bindtap="next">继续</button>
 </view>

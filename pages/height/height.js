@@ -12,10 +12,7 @@ Page({
   next: function() {
     app.globalData.height = this.data.height;
     wx.navigateTo({
-      url: '/pages/goals/goals'
+      url: '/pages/BFR/BFR'
     })
-  },
-  back: function() {
-    wx.navigateBack();
   }
 })

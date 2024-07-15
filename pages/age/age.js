@@ -24,11 +24,8 @@ Page({
     if (this.data.age !== '') {
       app.globalData.age = this.data.age;
       wx.navigateTo({
-        url: '/pages/weight/weight'
+        url: '/pages/goals/goals'
       });
     }
-  },
-  back: function() {
-    wx.navigateBack();
   }
 });

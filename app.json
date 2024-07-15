@@ -7,7 +7,8 @@
     "pages/height/height",
     "pages/goals/goals",
     "pages/fitness/fitness",
-    "pages/result/result"
+    "pages/result/result",
+    "pages/BFR/BFR"
   ],
   "window": {
     "backgroundTextStyle": "light",

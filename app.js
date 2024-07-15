@@ -6,7 +6,9 @@ App({
     unit: 'null',
     goalsWeight: null,
     goalsUnit: null,
-    goals: [],
-    fitnessLevels: []
+    goals: null,
+    BFR: null,
+    fitnessLevel: null,
+    date: null
   }
 })

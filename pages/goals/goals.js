@@ -2,11 +2,11 @@ const app = getApp();
 
 Page({
   data: {
-    goals: [],
+    goals: null,
     goalOptions: [
-      "我想增加肌肉和力量。",
-      "我想减肥。",
-      "我想保持现在的身材。"
+      { name: "我想增加肌肉和力量。", value: "0"},
+      { name: "我想减肥。", value: "1"},
+      { name: "我想保持现在的身材。", value: "2"}
     ]
   },
   bindGoalChange: function(e) {
@@ -15,12 +15,11 @@ Page({
     })
   },
   next: function() {
-    app.globalData.goals = this.data.goals;
-    wx.navigateTo({
-      url: '/pages/fitness/fitness'
-    })
-  },
-  back: function() {
-    wx.navigateBack();
+      if (this.data.goals) {
+          app.globalData.goals = this.data.goals;
+          wx.navigateTo({
+            url: '/pages/weight/weight'
+          })
+      }
   }
 })

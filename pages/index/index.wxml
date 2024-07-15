@@ -1,7 +1,8 @@
 <view class="container">
-  <view class="title">60秒内找到最适合你的饮食</view>
-  <text class="description">
-    你每天应该摄入多少卡路里?你的“宏”呢?你应该吃什么类型的食物?你应该在你的养生法中加入补充剂吗?现在就参加这个测试，以获得这些问题和更多问题的科学答案。
-  </text>
-  <button bindtap="startQuiz">开始</button>
+    <view class="title">60秒内找到最适合你的饮食</view>
+    <text class="description">
+        只要有人想减重或增重，卻不在乎卡路里，或是说攝入的热量和体重增减无关，这些人就是在犯傻。另外在身体特別想吃，食欲非常旺盛时，你要如何控制？不计算卡路里会让你的减脂之路变得困难重重。
+        我还是建议大家应该计算卡路里，轻松制定增肌减脂的饮食计划，不是更好吗？
+    </text>
+    <button class="next-button" bindtap="startQuiz">开始</button>
 </view>

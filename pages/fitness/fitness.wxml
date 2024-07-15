@@ -7,6 +7,5 @@
       </label>
     </block>
   </radio-group>
-  <button class="primary-button" bindtap="next" disabled="{{fitnessLevels.length === 0}}">继续</button>
-  <button class="secondary-button" bindtap="back">返回</button>
+  <button class="next-button" bindtap="next" disabled="{{fitnessLevel === null}}">继续</button>
 </view>
