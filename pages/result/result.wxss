@@ -1,94 +1,151 @@
 /* index.wxss */
 .container {
-  padding: 20px;
-  background-color: #f0f4f8; /* 健身风格的背景色 */
-  font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif;
+
+    padding: 20px;
+
+    background-color: #f0f4f8; /* 健身风格的背景色 */
 }
 
 .title {
-  font-size: 22px;
-  font-weight: bold;
-  color: #007bff; /* 健身风格的强调色 */
-  margin-bottom: 10px;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* 增加阴影效果 */
+    font-size: 22px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    color: #007bff; /* 健身风格的强调色 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .1); /* 增加阴影效果 */
 }
 
 .recommendations {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
+    position: relative;
+
+    margin-bottom: 30px;
+    padding: 20px;
+
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+}
+
+.watermark {
+    font-size: 20px;
+
+    position: absolute;
+    top: 50%;
+    right: 50%;
+
+    transform: rotate(45deg)  translate(30%, -100%);
+    white-space: pre-wrap;
+
+    color: rgba(0, 0, 0, .1);
+}
+
+.watermark > view {
+    text-align: center;
 }
 
 .recommendation-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #e0e0e0;
+    display: flex;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #e0e0e0;
+
+    justify-content: space-between;
+    align-items: center;
 }
 
 .recommendation-item:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .label {
-  font-size: 18px;
-  color: #555;
+    font-size: 18px;
+
+    color: #555;
 }
 
 .value {
-  font-size: 18px;
-  color: #007bff; /* 健身风格的强调色 */
-  font-weight: bold;
+    font-size: 18px;
+    font-weight: bold;
+
+    color: #007bff; /* 健身风格的强调色 */
 }
 
 .tips {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
 }
 
 .tips .tip-title {
-  font-size: 22px;
-  font-weight: bold;
-  color: #007bff; /* 健身风格的强调色 */
-  margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+
+    text-align: center;
+
+    color: #007bff; /* 健身风格的强调色 */
 }
 
 .tips view {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 15px;
-  line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+
+    color: #333;
 }
 
 .tips .promo {
-  font-size: 18px;
-  font-weight: bold;
-  color: #28a745; /* 健身风格的强调色 */
-  text-align: center;
-  margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #28a745; /* 健身风格的强调色 */
 }
 
 .qr-code {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 30px;
+
+    align-items: center;
 }
 
 .qr-image {
-  width: 200px;
-  border: 2px solid #007bff; /* 健身风格的强调色 */
-  border-radius: 10px;
+    width: 200px;
+
+    border: 2px solid #007bff; /* 健身风格的强调色 */
+    border-radius: 10px;
 }
 
 .qr-text {
-  font-size: 18px;
-  color: #333;
-  margin-top: 10px;
+    font-size: 18px;
+
+    margin-top: 10px;
+
+    color: #333;
+}
+
+.disclaimer-text {
+    font-size: 12px;
+    line-height: 1.5;
+
+    padding-top: 10px;
+
+    text-align: right;
+
+    color: #666;
+    color: #ccc;
 }
