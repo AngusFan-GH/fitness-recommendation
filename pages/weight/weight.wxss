@@ -1,63 +1,92 @@
 /* index.wxss */
 .container {
-  padding: 20px;
-  background-color: #f0f4f8; /* 健身风格的背景色 */
-  font-family: 'Arial', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 20px;
+
+    background-color: #f0f4f8; /* 健身风格的背景色 */
+
+    align-items: center;
+    justify-content: center;
 }
 
 .title {
-  font-size: 28px;
-  font-weight: bold;
-  color: #007bff; /* 健身风格的强调色 */
-  margin-bottom: 30px;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* 增加阴影效果 */
+    font-size: 28px;
+    font-weight: bold;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    color: #007bff; /* 健身风格的强调色 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .1); /* 增加阴影效果 */
 }
 
 .section {
-  width: 80%;
-  max-width: 400px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .section__title {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 10px;
+    font-size: 18px;
+
+    margin-bottom: 10px;
+
+    color: #333;
 }
 
 .wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
 }
 
 .input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-right: 10px;
+    flex: 1;
+
+    margin-right: 10px;
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .picker {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
+    flex: 1;
+
+    padding: 10px;
+
+    text-align: center;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .picker-text {
-  font-size: 16px;
-  color: #333;
+    font-size: 16px;
+
+    color: #333;
+}
+
+.recommend-date {
+    font-size: 16px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.recommend-date > text {
+    cursor: pointer; /* 添加鼠标指针样式 */
+    text-decoration: underline; /* 添加下划线 */
+
+    color: #ff6347; /* 更鲜明的颜色 */
 }
 
 

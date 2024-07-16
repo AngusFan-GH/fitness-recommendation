@@ -19,13 +19,20 @@
         </view>
     </view>
     <view wx:if="{{goals !== '2'}}" class="section">
-        <view class="section__title">计划完成日期:</view>
+        <view class="section__title">{{goalsMap[goals]}}完成日期:</view>
         <picker mode="date" value="{{date}}" start="{{startDate}}" bindchange="bindDateChange" class="picker">
             <view class="picker-text">
                 <text wx:if="{{date}}">{{date}}</text>
                 <text wx:else>选择目标日期</text>
             </view>
         </picker>
+        <view class="recommend-date" wx:if="{{recommendDate && recommendDays > 0}}" bindtap="useRecommendDate">推荐日期：
+            <text>{{recommendDate}}</text>
+            ({{recommendDays}}天)
+        </view>
+        <view class="recommend-date" wx:if="{{recommendDays < 0}}" bindtap="clearGoalsWeight">
+            <text>你似乎偏离了{{goalsMap[goals]}}的目标。</text>
+        </view>
     </view>
     <button class="next-button" disabled="{{goals === '2' ? weight === null : weight === null || goalsWeight === null || date === null}}" bindtap="next">继续</button>
 </view>

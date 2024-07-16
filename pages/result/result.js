@@ -67,6 +67,13 @@ Page({
     },
     // 体重单位转换
     standardizeUnit2Kg: function (weight, unit) {
-        return unit === '1' ? weight * 2.20462 : weight;
+        switch (unit) {
+            case '1':
+                return weight * 0.5;
+            case '2':
+                return weight * 2.20462;
+            default:
+                return weight;
+        }
     },
 });
