@@ -13,7 +13,17 @@ Page({
             calories: 0,
             protein: 0,
             fat: 0
-        }
+        },
+        previewList: [
+            {
+                label: '微信',
+                src: '/images/qr-code.jpg'
+            },
+            {
+                label: '小红书',
+                src: '/images/qr-code2.jpg'
+            }
+        ]
     },
     onLoad: function (options) {
         const {
@@ -76,4 +86,11 @@ Page({
                 return weight;
         }
     },
+    previewImage(e) {
+        const currentUrl = e.currentTarget.dataset.src; // 获取当前点击图片链接
+        wx.previewImage({
+            current: currentUrl, // 当前点击的图片链接,
+            urls: this.data.previewList.map(item => item.src)
+        });
+    }
 });
