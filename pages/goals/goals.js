@@ -1,5 +1,5 @@
 const app = getApp();
-
+const share = require('../../utils/share.js');
 Page({
     data: {
         goals: null,
@@ -32,5 +32,7 @@ Page({
                 url: '/pages/weight/weight'
             })
         }
-    }
+    },
+    onShareAppMessage: share.onShareAppMessage,
+    onShareTimeline: share.onShareTimeline
 })

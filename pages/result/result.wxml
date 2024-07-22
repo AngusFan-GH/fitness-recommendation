@@ -5,7 +5,7 @@
             <view>小红书@小陈教练</view>
         </view>
         <view class="recommendation-item">
-            <text class="title">你的每日饮食建议</text>
+            <text class="title">{{title}}</text>
         </view>
         <view class="recommendation-item">
             <text class="label">卡路里</text>

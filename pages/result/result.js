@@ -1,7 +1,8 @@
 const app = getApp();
-
+const share = require('../../utils/share.js');
 Page({
     data: {
+        title: '你的每日饮食建议',
         sexCoefficient: [1, 0.9],
         shapeCoefficient: [1, 0.95, 0.9, 0.85],
         fitnessLevels: [1.2, 1.3, 1.46, 1.55],
@@ -14,8 +15,7 @@ Page({
             protein: 0,
             fat: 0
         },
-        previewList: [
-            {
+        previewList: [{
                 label: '小红书',
                 src: '/images/qr-code2.jpg'
             },
@@ -92,5 +92,7 @@ Page({
             current: currentUrl, // 当前点击的图片链接,
             urls: this.data.previewList.map(item => item.src)
         });
-    }
+    },
+    onShareAppMessage: share.onShareAppMessage,
+    onShareTimeline: share.onShareTimeline
 });

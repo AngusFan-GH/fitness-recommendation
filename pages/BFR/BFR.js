@@ -1,4 +1,5 @@
 const app = getApp();
+const share = require('../../utils/share.js');
 
 Page({
   data: {
@@ -64,5 +65,7 @@ Page({
         url: '/pages/fitness/fitness'
       });
     }
-  }
+  },
+  onShareAppMessage: share.onShareAppMessage,
+  onShareTimeline: share.onShareTimeline
 });

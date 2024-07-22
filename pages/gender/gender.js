@@ -1,5 +1,5 @@
 const app = getApp();
-
+const share = require('../../utils/share.js');
 Page({
     data: {
         genderOptions: [{
@@ -27,5 +27,7 @@ Page({
                 url: '/pages/age/age'
             });
         }
-    }
+    },
+    onShareAppMessage: share.onShareAppMessage,
+    onShareTimeline: share.onShareTimeline
 });

@@ -1,5 +1,5 @@
 const app = getApp();
-
+const share = require('../../utils/share.js');
 Page({
     data: {
         fitnessLevel: null,
@@ -33,5 +33,7 @@ Page({
                 url: '/pages/result/result'
             });
         }
-    }
+    },
+    onShareAppMessage: share.onShareAppMessage,
+    onShareTimeline: share.onShareTimeline
 });

@@ -1,5 +1,5 @@
 const app = getApp();
-
+const share = require('../../utils/share.js');
 Page({
   data: {
     height: null,
@@ -22,5 +22,7 @@ Page({
     wx.navigateTo({
       url: '/pages/BFR/BFR'
     })
-  }
+  },
+  onShareAppMessage: share.onShareAppMessage,
+  onShareTimeline: share.onShareTimeline
 })

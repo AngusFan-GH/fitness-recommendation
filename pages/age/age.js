@@ -1,5 +1,5 @@
 const app = getApp();
-
+const share = require('../../utils/share.js');
 Page({
   data: {
     age: '',
@@ -37,5 +37,7 @@ Page({
         url: '/pages/goals/goals'
       });
     }
-  }
+  },
+  onShareAppMessage: share.onShareAppMessage,
+  onShareTimeline: share.onShareTimeline
 });

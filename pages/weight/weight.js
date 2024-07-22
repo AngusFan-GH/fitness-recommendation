@@ -1,5 +1,5 @@
 const app = getApp();
-
+const share = require('../../utils/share.js');
 Page({
   data: {
     goals: null,
@@ -113,5 +113,7 @@ Page({
     wx.navigateTo({
       url: '/pages/height/height'
     });
-  }
+  },
+  onShareAppMessage: share.onShareAppMessage,
+  onShareTimeline: share.onShareTimeline
 });
