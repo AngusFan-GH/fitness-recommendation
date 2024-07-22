@@ -27,23 +27,14 @@
     </view>
 
     <view class="tips">
-        <view class="tip-title">减脂增肌不是百米赛跑，是场马拉松</view>
-        <view>在这个快速消费的时代里，我们总希望能“速成”无论是事业、爱情还是身材。但记住一句话：慢就是快。</view>
-        <view>首先，要明白一点，健康的体魄不是一夜之间就能拥有的。它需要的是持续的努力和正确的方向。</view>
-        <view>不要因为短期内看不到显著变化而气馁。身体的变化是渐进式的，就像种下一棵树苗，需要时间去成长。</view>
-        <view>让我们一起耐心地享受这个过程吧！记住，美好的事物总是值得等待的。</view>
-        <view>一切关于健身方面的问题都可以问我。</view>
-        <view class="promo">添加好友可获得一整月饮食&健身计划一份</view>
+        <view class="tip-title">对三大营养素没概念？</view>
+        <view>移步小红书@小陈教练(带人减脂版)</view>
+        <view>有详细的内容讲解及操作流程，助你减脂更快一步。</view>
         <view class="qr-code">
             <image src="{{previewList[0].src}}" data-src="{{previewList[0].src}}" mode="aspectFit" class="qr-image" show-menu-by-longpress="true" bindtap="previewImage"></image>
             <view>{{previewList[0].label}}</view>
         </view>
-    </view>
-
-    <view class="tips">
-        <view class="tip-title">对三大营养素没概念？</view>
-        <view>移步小红书@小陈教练(带人减脂版)</view>
-        <view>有详细的内容讲解及操作流程，助你减脂更快一步。</view>
+        <view class="promo">添加好友可获得一整月饮食&健身计划一份</view>
         <view class="qr-code">
             <image src="{{previewList[1].src}}" data-src="{{previewList[1].src}}" mode="aspectFit" class="qr-image" show-menu-by-longpress="true" bindtap="previewImage"></image>
             <view>{{previewList[1].label}}</view>

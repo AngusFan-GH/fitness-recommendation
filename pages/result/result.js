@@ -16,12 +16,12 @@ Page({
         },
         previewList: [
             {
-                label: '微信',
-                src: '/images/qr-code.jpg'
-            },
-            {
                 label: '小红书',
                 src: '/images/qr-code2.jpg'
+            },
+            {
+                label: '微信',
+                src: '/images/qr-code.jpg'
             }
         ]
     },
