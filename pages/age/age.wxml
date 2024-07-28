@@ -1,9 +1,13 @@
 <view class="container">
+  <view class="skip-button" bind:tap="skip">跳过</view>
+  <view class="age-wrapper" style="{{containerStyle}}">
     <view class="title">你的年龄是多少？</view>
     <view class="wrapper">
-        <input type="number" placeholder="年龄" value="{{age}}" bindblur="bindAgeInput" class="input" />
-        <view class="unit">岁</view>
+      <input type="number" auto-focus="true" placeholder="年龄" value="{{age}}" bindblur="bindAgeInput"
+        bindfocus="onFocus" class="input" />
+      <view class="unit">岁</view>
     </view>
     <text class="hint">请输入 {{minAge}} 和 {{maxAge}} 之间的数字</text>
-    <button class="next-button" bindtap="next" disabled="{{age === ''}}">继续</button>
+  </view>
+  <button class="next-button" bindtap="next" disabled="{{age === ''}}">继续</button>
 </view>

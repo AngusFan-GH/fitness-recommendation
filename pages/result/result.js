@@ -16,13 +16,13 @@ Page({
             fat: 0
         },
         previewList: [{
-                label: '小红书',
-                src: '/images/qr-code2.jpg'
-            },
-            {
-                label: '微信',
-                src: '/images/qr-code.jpg'
-            }
+            label: '小红书',
+            src: '/images/qr-code2.jpg'
+        },
+        {
+            label: '微信',
+            src: '/images/qr-code.jpg'
+        }
         ]
     },
     onLoad: function (options) {
@@ -31,11 +31,12 @@ Page({
             weight,
             unit,
             goalsWeight,
-            date,
+            completeDate,
             goals,
             fitnessLevel,
             BFR,
         } = app.globalData;
+        const date = completeDate.replace(/-/g, '/');
         const BMR = this.calcBMR(weight, gender, BFR);
         const TDEE = this.calcTDEE(BMR, fitnessLevel);
         const heatGap = this.calcHeatGap(weight, unit, goalsWeight, date, goals);
@@ -71,8 +72,9 @@ Page({
     calcDays: function (givenDate) {
         const date = new Date(givenDate);
         const now = new Date();
-        const diffInMs = now - date;
-        const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+        const diffInMs = date - now;
+        let diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+        diffInDays = diffInDays < 0 ? 0 : diffInDays;
         return Math.floor(diffInDays);
     },
     // 体重单位转换

@@ -8,6 +8,6 @@ App({
     goals: null,
     BFR: null,
     fitnessLevel: null,
-    date: null
+    completeDate: null
   }
-})
+});

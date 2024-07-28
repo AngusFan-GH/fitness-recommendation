@@ -33,9 +33,14 @@ Page({
         goalsWeight: value
       });
     }
-    const { weight, goalsWeight, goals } = this.data;
+    const {
+      weight,
+      goalsWeight,
+      goals
+    } = this.data;
     if (weight !== null && goalsWeight !== null) {
-      let days = 0, date = null;
+      let days = 0,
+        date = null;
       switch (goals) {
         case '0':
           days = this.calculateDaysForMuscleGain(weight, goalsWeight);

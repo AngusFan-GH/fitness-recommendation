@@ -43,3 +43,13 @@ page {
 
     background-color: #ccc;
 }
+
+.skip-button {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #007bff;
+  font-weight: 500;
+}
